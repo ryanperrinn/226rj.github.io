@@ -43,7 +43,8 @@
 }
 
 .intro,
-.projects {
+.projects,
+.playlists {
 	padding: 0 0 5rem;
 }
 
@@ -56,7 +57,8 @@
 	}
 }
 
-.projects-list {
+.projects-list,
+.playlists-list {
 	@media (min-width: $breakpoint-small) {
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
@@ -105,7 +107,7 @@
 		position: relative;
 
 		&:before {
-			content: "View Project";
+			content: "View Playlist";
 			color: $color-white;
 			@extend .h2;
 			font-weight: 800;
@@ -147,7 +149,8 @@
 	}
 }
 
-.project {
+.project,
+.playlist {
 	left: 0;
 	position: relative;
 	top: 0;
@@ -194,8 +197,35 @@
 		}
 	}
 
-	.project-meta {
+	.project-meta,
+	.playlist-meta {
 		margin: 3rem 0 0;
+
+		.tag-dark {
+			color: #fff;
+			background-color: #343a40;
+		}
+		.tag-light {
+			color: #212529;
+			background-color: #f8f9fa;
+		}
+		.tag-pill {
+			padding-right: .6em;
+			padding-left: .6em;
+			border-radius: 10rem;
+		}
+		.tag {
+			display: inline-block;
+			padding: .25em .4em;
+			font-size: 75%;
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: baseline;
+			border-radius: .25rem;
+			transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		}
 
 		@media (min-width: $breakpoint-medium) {
 			margin: 5rem 0 0;
@@ -230,7 +260,8 @@
 	}
 }
 
-.project-navigation {
+.project-navigation,
+.playlist-navigation  {
 	background: $color-black;
 	padding: 5rem 0;
 
@@ -366,4 +397,63 @@
 .contact,
 .follow {
 	margin-bottom: 3rem;
+}
+
+.follow {
+	a[href*="youtube"],
+	a[href*="twitter"],
+	a[href*="reddit"],
+	a[href*="discord"]{
+		&:before {
+			font-family: "Font Awesome 5 Brands";
+			font-weight: 400;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			width: 1.5em;
+		}
+		span {
+			display: none;
+		}
+	}
+	a[href*="youtube"] {
+		&:before {
+			content: "\f167";
+			color: #e52d27;
+	   	}
+		&:after {
+			content: 'YouTube';
+		}
+	}
+	a[href*="twitter"] {
+		&:before {
+			content: "\f099";
+			color: #55acee;
+	   	}
+		&:after {
+			content: 'Twitter';
+		}
+	}
+	a[href*="reddit"] {
+		&:before {
+			content: "\f281";
+			color:  #ff4500;
+	   	}
+		&:after {
+			content: 'Reddit';
+		}
+	}
+	a[href*="discord"] {
+		&:before {
+			content: "\f392";
+			color: #7289da;
+	   	}
+		&:after {
+			content: 'Discord';
+		}
+	}
 }

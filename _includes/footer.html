@@ -7,9 +7,9 @@
 		<section class="follow">
 			<h2>Follow</h2>
 			<ul>
-				<li><a title="Twitter" href="{{ site.linkedin }}" target="_blank">Linkedin</a></li>
-				<li><a title="Twitter" href="{{ site.twitter }}" target="_blank">Twitter</a></li>
-				<li><a title="Github" href="{{ site.github }}" target="_blank">Github</a></li>
+				{% for link in site.social.links %}
+				<li><a title="{{ link }}" href="{{ link }}" target="_blank"><span>{{ link }}</span></a></li>
+				{% endfor %}
 			</ul>
 		</section>
 	</div>

@@ -1,17 +1,35 @@
-# User config
-author: "RJ226"
+# Site config
+name: "RJ226"
 tagline: "Helping YOU build better in Minecraft"
 description: "My name is RJ226 and I am a Minecraft youtuber. I love to build in Minecraft I would say I’m good but certain not the best. But don’t let that stop you from sticking around and watching a few of my videos!
 I am going to try my best at helping you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others."
-keywords: "RJ226 Minecraft"
+author: "RJ226"
+lang: en_GB
+
+# User config
 email: "rj226@example.com"
-linkedin: "https://www.linkedin.com/"
-twitter: "https://twitter.com/"
-github: "https://github.com/"
+
+# Social profiles
+social:
+  name: RJ226
+  links:
+    - https://www.youtube.com/channel/UC3J585n81BMItgouCZOZi_w
+    - https://twitter.com/226Rj
+    - https://www.reddit.com/r/RJ226/
+    - https://discord.gg/cBUVsja
+
+
+# Outputting
+baseurl: ""
+timezone: "Europe/London"
+permalink: "/:categories/:title"
 
 # Site config
-baseurl: ""
 highlighter: rouge
 sass:
   sass_dir: assets/scss
   style: compressed
+
+# Plugins
+plugins:
+  - jekyll-seo-tag

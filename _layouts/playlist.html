@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ page.title }} | {{ site.author }}</title>
+	{% include head.html %}
+</head>
+<body>
+	{% include header.html %}
+	<main class="content">
+		<section class="playlist">
+			<div class="container">
+				<article>
+					<span class="h2">Playlist Title</span>
+					<h1>
+						<a href="{{ page.playlist.url }}" target="_blank" title="{{ page.title }}" rel="nofollow">{{ page.title }}</a>
+					</h1>
+					<span class="h2">Description</span>
+					{{ page.content }}
+					<div class="playlist-meta">
+						<span class="h2">Channel</span>
+						<p><a title="{{ page.playlist.channel }}" href="{{ site.data.channels[page.playlist.channel].url }}" target="_blank" rel="nofollow">{{ page.playlist.channel }}</a></p>
+						<span class="h2">Year</span>
+						<p>{{ page.date | date: "%Y" }}</p>
+						<span class="h2">Tags</span>
+						{% for tag in page.tags %}
+						<span class="tag tag-pill tag-dark"><i class="fas fa-tag fa-fw"></i>{{ tag }}</span>
+						{% endfor %}
+					</div>
+				</article>
+				<aside>
+					<ul>
+						{% for image in page.images %}
+						<li>
+							<img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.alt }}" />
+						</li>
+						{% endfor %}
+					</ul>
+				</aside>
+			</div>
+		</section>
+		<section class="playlist-navigation">
+			<div class="container">
+				{% if page.previous and page.previous.categories contains "projects" %}
+				<a title="Previous {{ page.previous.playlist.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
+					<span class="h2">Previous</span>
+					<h2>{{ page.previous.playlist.title }}</h2>
+				</a>
+				{% endif %}
+				{% if page.next and page.next.categories contains "projects" %}
+				<a title="Next {{ page.next.playlist.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
+					<span class="h2">Next</span>
+					<h2>{{ page.next.playlist.title }}</h2>
+				</a>
+				{% endif %}
+			</div>
+		</section>
+	</main>
+	{% include footer.html %}
+	<script src="{{ "/assets/scripts/vendor/jquery-1.12.4.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/assets/scripts/vendor/sticky-kit.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/assets/scripts/playlist.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>

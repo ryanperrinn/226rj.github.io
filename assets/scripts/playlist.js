@@ -8,9 +8,9 @@
 			var w = $(window).width();
 
 			if (w < 750) {
-				$('.project article').trigger('sticky_kit:detach');
+				$('.playlist article').trigger('sticky_kit:detach');
 			} else {
-				$('.project article').stick_in_parent({
+				$('.playlist article').stick_in_parent({
 					offset_top: $('.header').outerHeight()
 				});
 			}
@@ -25,5 +25,5 @@
 		scale    : 1
 	});
 
-	sr.reveal('.project li');
+	sr.reveal('.playlist li');
 }(jQuery));
