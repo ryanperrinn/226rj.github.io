@@ -40,13 +40,13 @@
 		</section>
 		<section class="playlist-navigation">
 			<div class="container">
-				{% if page.previous and page.previous.categories contains "projects" %}
+				{% if page.previous and page.previous.categories contains "playlists" %}
 				<a title="Previous {{ page.previous.playlist.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
 					<span class="h2">Previous</span>
 					<h2>{{ page.previous.playlist.title }}</h2>
 				</a>
 				{% endif %}
-				{% if page.next and page.next.categories contains "projects" %}
+				{% if page.next and page.next.categories contains "playlists" %}
 				<a title="Next {{ page.next.playlist.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
 					<span class="h2">Next</span>
 					<h2>{{ page.next.playlist.title }}</h2>
