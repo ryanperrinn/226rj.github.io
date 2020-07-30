@@ -4,7 +4,7 @@
 			<h2>Quick Links</h2>
 			<ul>
 				<li><a title="About" href="{{ "/#about" | prepend: site.baseurl }}">About</a></li>
-				<li><a title="{{ site.email }}" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				<li><a title="{{ site.data.authors[site.author].email }}" href="mailto:{{ site.data.authors[site.author].email }}">{{ site.data.authors[site.author].email }}</a></li>
 				<li><a title="sitemap.xml" href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a></li>
 			</ul>
 		</section>

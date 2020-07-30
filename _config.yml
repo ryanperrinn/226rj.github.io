@@ -1,14 +1,11 @@
 # Site config
 name: "RJ226"
 tagline: "Helping YOU build better in Minecraft"
-description: "My name is RJ226 and I am a Minecraft youtuber. I love to build in Minecraft I would say I’m good but certain not the best. But don’t let that stop you from sticking around and watching a few of my videos!
+description: "My name is RJ226 and I am a Minecraft youtuber. I love to build in Minecraft. I would say I’m good, but certainly not the best. But don’t let that stop you from sticking around and watching a few of my videos!
 I am going to try my best at helping you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others."
 author: "RJ226"
 logo: "/ms-icon-310x310.png"
 lang: en_GB
-
-# User config
-email: "rj226@example.com"
 
 # Social profiles
 social:
