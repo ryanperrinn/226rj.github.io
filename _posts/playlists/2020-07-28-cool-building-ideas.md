@@ -3,11 +3,11 @@ layout: playlist
 category: playlists
 title: "Cool building ideas"
 tags: Sandcastle Drone
+image: "/assets/images/playlists/cool-building-ideas/cool-building-ideas-logo.jpg"
 
 playlist:
   type: "Playlist"
   url: "https://www.youtube.com/playlist?list=PLFg4Um4EYZg5lWOieZTc5udmgj4CEBnxB"
-  logo: "/assets/images/playlists/cool-building-ideas/cool-building-ideas-logo.jpg"
   channel: RJ226
 
 images:

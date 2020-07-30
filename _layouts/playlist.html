@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ page.title }} | {{ site.author }}</title>
+	<title>{{ page.title }} | {{ site.name }}</title>
 	{% include head.html %}
 </head>
 <body>
@@ -31,7 +31,7 @@
 					<ul>
 						{% for image in page.images %}
 						<li>
-							<img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.alt }}" />
+							<img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.alt }}" title="{{ image.alt }}" />
 						</li>
 						{% endfor %}
 					</ul>

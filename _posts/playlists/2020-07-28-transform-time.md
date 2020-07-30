@@ -3,11 +3,11 @@ layout: playlist
 category: playlists
 title: "Transform Time"
 tags: Caves End-Island
+image: "/assets/images/playlists/transform-time/transform-time-logo.jpg"
 
 playlist:
   type: "Playlist"
   url: "https://www.youtube.com/playlist?list=PLFg4Um4EYZg5lWOieZTc5udmgj4CEBnxB"
-  logo: "/assets/images/playlists/transform-time/transform-time-logo.jpg"
   channel: RJ226
 
 images:

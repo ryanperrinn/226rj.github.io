@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.author }} | {{ site.tagline }}</title>
+	<title>{{ site.name }} | {{ site.tagline }}</title>
 	{% include head.html %}
 </head>
 <body>
@@ -11,7 +11,7 @@
 	<main class="content">
 		<section class="intro">
 			<div class="container">
-				<h2><i class="fas fa-user fa-fw fa-pull-left"></i>About me</h2>
+				<h2 id="about"><i class="fas fa-user fa-fw fa-pull-left"></i>About me</h2>
 				<p>{{ site.description }}</p>
 			</div>
 		</section>
@@ -21,9 +21,9 @@
 				<ul class="playlists-list">
 					{% for item in site.categories.playlists reversed %}
 						<li>
-							<a href="{{ item.url | prepend: site.baseurl }}">
+							<a href="{{ item.url | prepend: site.baseurl }}" title="{{ item.title }}">
 								<div class="img-wrapper">
-									<img src="{{ item.playlist.logo | prepend: site.baseurl }}" alt="{{ item.title }}" />
+									<img src="{{ item.image | prepend: site.baseurl }}" alt="{{ item.title }}"  title="{{ item.title }}" />
 								</div>
 								<span class="h2">{{ item.playlist.type }}</span>
 								<h3>{{ item.title }}</h3>

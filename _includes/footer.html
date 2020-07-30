@@ -1,8 +1,12 @@
 <footer class="footer">
 	<div class="container">
 		<section class="contact">
-			<h2>Contact</h2>
-			<a title="{{ site.email }}" href="mailto:{{ site.email }}">{{ site.email }}</a>
+			<h2>Quick Links</h2>
+			<ul>
+				<li><a title="About" href="{{ "/#about" | prepend: site.baseurl }}">About</a></li>
+				<li><a title="{{ site.email }}" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				<li><a title="sitemap.xml" href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a></li>
+			</ul>
 		</section>
 		<section class="follow">
 			<h2>Follow</h2>
