@@ -43,7 +43,6 @@
 }
 
 .intro,
-.projects,
 .playlists {
 	padding: 0 0 5rem;
 }
@@ -57,7 +56,6 @@
 	}
 }
 
-.projects-list,
 .playlists-list {
 	@media (min-width: $breakpoint-small) {
 		margin-left: -1.5rem;
@@ -149,7 +147,6 @@
 	}
 }
 
-.project,
 .playlist {
 	left: 0;
 	position: relative;
@@ -197,7 +194,6 @@
 		}
 	}
 
-	.project-meta,
 	.playlist-meta {
 		margin: 3rem 0 0;
 
@@ -260,7 +256,6 @@
 	}
 }
 
-.project-navigation,
 .playlist-navigation  {
 	background: $color-black;
 	padding: 5rem 0;
