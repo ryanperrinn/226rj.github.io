@@ -1,63 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>{{ page.title }} | {{ site.name }}</title>
-	{% include head.html %}
-</head>
-<body>
-	{% include header.html %}
-	<main class="content">
-		<section class="playlist">
-			<div class="container">
-				<article>
-					<span class="h2">Playlist Title</span>
-					<h1>
-						<a href="{{ page.playlist.url }}" target="_blank" title="{{ page.title }}" rel="nofollow">{{ page.title }}</a>
-					</h1>
-					<span class="h2">Description</span>
-					{{ page.content }}
-					<div class="playlist-meta">
-						<span class="h2">Channel</span>
-						<p><a title="{{ page.playlist.channel }}" href="{{ site.data.channels[page.playlist.channel].url }}" target="_blank" rel="nofollow">{{ page.playlist.channel }}</a></p>
-						<span class="h2">Year</span>
-						<p>{{ page.date | date: "%Y" }}</p>
-						<span class="h2">Tags</span>
-						{% for tag in page.tags %}
-						<span class="tag tag-pill tag-dark"><i class="fas fa-tag fa-fw"></i>{{ tag }}</span>
-						{% endfor %}
-					</div>
-				</article>
-				<aside>
-					<ul>
-						{% for image in page.images %}
-						<li>
-							<img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.alt }}" title="{{ image.alt }}" />
-						</li>
-						{% endfor %}
-					</ul>
-				</aside>
+---
+layout: default
+---
+<section class="playlist">
+	<div class="container">
+		<article>
+			<span class="h2">Playlist Title</span>
+			<h1>
+				<a href="{{ page.playlist.url }}" target="_blank" title="{{ page.title }}" rel="nofollow">{{ page.title }}</a>
+			</h1>
+			<span class="h2">Description</span>
+			{{ page.content }}
+			<div class="playlist-meta">
+				<span class="h2">Channel</span>
+				<p><a title="{{ page.playlist.channel }}" href="{{ site.data.channels[page.playlist.channel].url }}" target="_blank" rel="nofollow">{{ page.playlist.channel }}</a></p>
+				<span class="h2">Year</span>
+				<p>{{ page.date | date: "%Y" }}</p>
+				<span class="h2">Tags</span>
+				{% for tag in page.tags %}
+				<span class="tag tag-pill tag-dark"><i class="fas fa-tag fa-fw"></i>{{ tag }}</span>
+				{% endfor %}
 			</div>
-		</section>
-		<section class="playlist-navigation">
-			<div class="container">
-				{% if page.previous and page.previous.categories contains "playlists" %}
-				<a title="Previous {{ page.previous.playlist.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
-					<span class="h2">Previous</span>
-					<h2>{{ page.previous.playlist.title }}</h2>
-				</a>
-				{% endif %}
-				{% if page.next and page.next.categories contains "playlists" %}
-				<a title="Next {{ page.next.playlist.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
-					<span class="h2">Next</span>
-					<h2>{{ page.next.playlist.title }}</h2>
-				</a>
-				{% endif %}
-			</div>
-		</section>
-	</main>
-	{% include footer.html %}
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-	<script src="{{ "/assets/scripts/vendor/sticky-kit.min.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/assets/scripts/playlist.min.js" | prepend: site.baseurl }}"></script>
-</body>
-</html>
+		</article>
+		<aside>
+			<ul>
+				{% for image in page.images %}
+				<li>
+					<img src="{{ image.url | prepend: site.baseurl }}" alt="{{ image.alt }}" title="{{ image.alt }}" />
+				</li>
+				{% endfor %}
+			</ul>
+		</aside>
+	</div>
+</section>
+<section class="playlist-navigation">
+	<div class="container">
+		{% if page.previous and page.previous.categories contains "playlists" %}
+		<a title="Previous {{ page.previous.playlist.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
+			<span class="h2">Previous</span>
+			<h2>{{ page.previous.playlist.title }}</h2>
+		</a>
+		{% endif %}
+		{% if page.next and page.next.categories contains "playlists" %}
+		<a title="Next {{ page.next.playlist.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
+			<span class="h2">Next</span>
+			<h2>{{ page.next.playlist.title }}</h2>
+		</a>
+		{% endif %}
+	</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="{{ "/assets/scripts/vendor/sticky-kit.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/scripts/playlist.min.js" | prepend: site.baseurl }}"></script>
