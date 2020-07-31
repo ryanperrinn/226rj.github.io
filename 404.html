@@ -1,0 +1,25 @@
+---
+permalink: /404.html
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ site.name }} | {{ site.tagline }}</title>
+	{% include head.html %}
+</head>
+<body>
+	{% include header.html %}
+	<main class="content">
+		<section class="intro">
+			<div class="container">
+				<h2 id="about"><i class="fas fa-exclamation-triangle fa-fw fa-pull-left"></i>Error</h2>
+				<p>You did an oopsie!</p>
+                <p>The page or content you are looking for doesn't appear to exist.</p>
+                <p>Perhaps you might like to swing by the <a id="home-page" href="{{ site.url }}">home page</a> and see if it can be located from there.</p>
+			</div>
+		</section>
+	</main>
+	{% include footer.html %}
+</body>
+</html>
