@@ -47,3 +47,6 @@ defaults:
     values:
       layout: "playlist"
       category: playlists
+      playlist:
+        type: "Playlist"
+        channel: "RJ226"
