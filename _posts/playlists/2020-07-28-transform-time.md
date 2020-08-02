@@ -2,7 +2,7 @@
 layout: playlist
 category: playlists
 title: "Transform Time"
-tags: Caves End-Island
+tags: Caves End-Island Ice
 image: "/assets/images/playlists/transform-time/transform-time-logo.jpg"
 
 playlist:
@@ -28,4 +28,4 @@ images:
     alt: "Transform Time 4: Ice"
     id: "OJq48iXiYFI"
 ---
-<p>Stuff about cool building ideas playlist.</p>
+<p>Stuff about the transform time playlist.</p>
