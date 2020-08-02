@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="container">
-		<h1 class="logo">
+		{% if page.layout == 'home' %}<h1 class="logo">{% else %}<span class="logo">{% endif %}
 			<a title="{{ site.name }}" href="{{ site.baseurl | append: "/" }}">{{ site.name }} - {{ site.tagline }}</a>
-		</h1>
+		{% if page.layout == 'home' %}</h1>{% else %}</span>{% endif %}
 	</div>
 </header>
