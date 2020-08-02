@@ -1,6 +1,4 @@
 ---
-layout: playlist
-category: playlists
 title: "Transform Time"
 tags: Caves End-Island Ice
 image: "/assets/images/playlists/transform-time/transform-time-logo.jpg"

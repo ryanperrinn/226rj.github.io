@@ -1,6 +1,4 @@
 ---
-layout: playlist
-category: playlists
 title: "Cool building ideas"
 tags: Sandcastle Drone
 image: "/assets/images/playlists/cool-building-ideas/cool-building-ideas-logo.jpg"

@@ -31,3 +31,19 @@ sass:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Front Matter defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_posts/playlists"
+      type: "posts"
+    values:
+      layout: "playlist"
+      category: playlists
