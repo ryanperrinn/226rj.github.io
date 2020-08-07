@@ -9,7 +9,7 @@ layout: default
 </section>
 <section class="playlists">
     <div class="container">
-        <h2><i class="fas fa-photo-video fa-fw fa-pull-left"></i>Playlists</h2>
+        <h2 id="playlists"><i class="fas fa-photo-video fa-fw fa-pull-left"></i>Playlists</h2>
         <ul class="playlists-list">
             {% for item in site.categories.playlists reversed %}
                 <li>
@@ -24,7 +24,7 @@ layout: default
                                 sizes="50vw" 
                             />
                         </div>
-                        <span class="h2">{{ item.playlist.type }}</span>
+                        <span class="h2">{{ item.playlist.type }} &#8226; {{ item.playlist.videos | size }} videos</span>
                         <h3>{{ item.title }}</h3>
                     </a>
                 </li>
