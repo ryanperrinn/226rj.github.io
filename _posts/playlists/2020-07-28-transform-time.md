@@ -1,26 +1,22 @@
 ---
-title: "Transform Time"
+title: Transform Time
 tags: Caves End-Island Ice
-image: "/assets/images/playlists/transform-time/transform-time-logo.jpg"
+image: /assets/images/playlists/transform-time/transform-time-logo.jpg
 
 playlist:
   id: PLFg4Um4EYZg5lWOieZTc5udmgj4CEBnxB
   videos:
     - 
+      id: tYsTJAXeOYQ
       title: "Transform Time 1: Caves"
-      id: "tYsTJAXeOYQ"
-      thumbnail: maxres
     - 
+      id: lF4gvUqQR5s
       title: "Transform Time 2: End Island"
-      id: "lF4gvUqQR5s"
-      thumbnail: maxres
     - 
+      id: AyzyEINRyrk
       title: "Transform Time 3: Mesa Plateau"
-      id: "AyzyEINRyrk"
-      thumbnail: maxres
     - 
+      id: OJq48iXiYFI
       title: "Transform Time 4: Ice"
-      id: "OJq48iXiYFI"
-      thumbnail: maxres
 ---
 <p>Stuff about the transform time playlist.</p>

@@ -1,18 +1,16 @@
 ---
-title: "Cool building ideas"
+title: Cool building ideas
 tags: Sandcastle Drone
-image: "/assets/images/playlists/cool-building-ideas/cool-building-ideas-logo.jpg"
+image: /assets/images/playlists/cool-building-ideas/cool-building-ideas-logo.jpg
 
 playlist:
   id: PLFg4Um4EYZg5lWOieZTc5udmgj4CEBnxB
   videos:
     - 
-      title: "Cool building ideas 1"
-      id: "MwkFF49QKyM"
-      thumbnail: sd
+      id: MwkFF49QKyM
+      title: Cool building ideas 1
     - 
-      title: "Cool building ideas 2"
-      id: "yj-GrrvVoBw"
-      thumbnail: sd
+      id: yj-GrrvVoBw
+      title: Cool building ideas 2
 ---
 <p>Stuff about cool building ideas playlist.</p>

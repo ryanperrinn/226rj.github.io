@@ -37,7 +37,7 @@
 	z-index: 1;
 
 	@media (min-width: $breakpoint-medium) {
-		padding: 21rem 0 0;
+		padding: 4rem 0 0;
 		margin-bottom: 23.42rem;
 	}
 }
@@ -153,7 +153,7 @@
 	top: 0;
 
 	@media (min-width: $breakpoint-medium) {
-		margin-top: -21rem;
+		margin-top: -4rem;
 
 		.article-wrapper {
 			position: absolute;
@@ -254,6 +254,27 @@
 	img {
 		width: 100%;
 	}
+
+	.iframe-container {
+		overflow: hidden;
+		padding-top: 56.25%;
+		position: relative;
+	}
+	
+	.iframe-container iframe {
+		border: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	
+	/* 4x3 Aspect Ratio */
+	.iframe-container-4x3 {
+	padding-top: 75%;
+	}
+	
 }
 
 .playlist-navigation  {

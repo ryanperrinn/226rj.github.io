@@ -32,7 +32,7 @@ common-js:
 			<ul>
 				{% for video in page.playlist.videos %}
 				<li>
-					<img src="https://i.ytimg.com/vi/{{ video.id }}/{{ video.thumbnail }}default.jpg" alt="{{ video.title }}" title="{{ video.title }}" />
+					{% include youtube-video.html id=video.id %}
 				</li>
 				{% endfor %}
 			</ul>
