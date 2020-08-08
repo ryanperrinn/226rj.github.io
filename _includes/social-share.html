@@ -26,10 +26,18 @@
   {% endif %}
 
   {% if site.share-links-active.linkedin %}
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}"
       class="btn btn-social-icon btn-sm btn-linkedin" title="Share on LinkedIn">
       <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
+    </a>
+  {% endif %}
+
+  {% if site.share-links-active.pinterest and page.image %}
+    <a href="https://pinterest.com/pin/create/button/?url={{ page.url | absolute_url | url_encode }}&media={{ page.url | absolute_url | url_encode }}&description={{ page.title | url_encode }}"
+      class="btn btn-social-icon btn-sm btn-pinterest" title="Share on Pinterest">
+      <span class="fab fa-fw fa-pinterest" aria-hidden="true"></span>
+      <span class="sr-only">Pinterest</span>
     </a>
   {% endif %}
 
