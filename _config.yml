@@ -1,9 +1,9 @@
 # Site config
-name: "RJ226"
-tagline: "Helping YOU build better in Minecraft"
-description: "RJ226 helps you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others."
-author: "RJ226"
-logo: "/ms-icon-310x310.png"
+name: RJ226
+tagline: Helping YOU build better in Minecraft
+description: RJ226 helps you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others.
+author: RJ226
+logo: /ms-icon-310x310.png
 lang: en_GB
 
 # Social profiles
@@ -17,8 +17,8 @@ social:
 
 # Outputting
 baseurl: ""
-timezone: "Europe/London"
-permalink: "/:categories/:title"
+timezone: Europe/London
+permalink: /:categories/:title
 
 # Site config
 highlighter: rouge
@@ -38,14 +38,14 @@ defaults:
       path: ""
       type: ""
     values:
-      layout: "default"
+      layout: default
   -
     scope:
-      path: "_posts/playlists"
-      type: "posts"
+      path: _posts/playlists
+      type: posts
     values:
-      layout: "playlist"
+      layout: playlist
       category: playlists
       playlist:
-        type: "Playlist"
-        channel: "RJ226"
+        type: Playlist
+        channel: RJ226
