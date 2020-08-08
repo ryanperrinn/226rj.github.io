@@ -164,10 +164,6 @@
 		}
 	}
 
-	.container {
-		max-width: 100%;
-	}
-
 	article {
 		margin-bottom: 3rem;
 
@@ -181,8 +177,7 @@
 	}
 
 	aside {
-		margin-left: -3rem;
-		margin-right: -3rem;
+		margin-bottom: 3rem;
 
 		@media (min-width: $breakpoint-small) {
 			@include clearfix;
@@ -190,7 +185,11 @@
 
 		@media (min-width: $breakpoint-medium) {
 			float: left;
-			width: 55%;
+			width: 52%;
+		}
+
+		li {
+			margin-bottom: 3rem;
 		}
 	}
 
