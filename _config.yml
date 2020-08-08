@@ -15,6 +15,13 @@ social:
     - https://www.reddit.com/r/RJ226/
     - https://discord.gg/cBUVsja
 
+# Select which social network share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  reddit: true
+  email: true
+
 # Outputting
 baseurl: ""
 timezone: Europe/London
@@ -46,6 +53,7 @@ defaults:
     values:
       layout: playlist
       category: playlists
+      social-share: true
       playlist:
         type: Playlist
         channel: RJ226
