@@ -413,62 +413,19 @@
 .follow {
 	margin-bottom: 3rem;
 }
-
 .follow {
-	a[href*="youtube"],
-	a[href*="twitter"],
-	a[href*="reddit"],
-	a[href*="discord"]{
-		&:before {
-			font-family: "Font Awesome 5 Brands";
-			font-weight: 400;
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			width: 1.5em;
-		}
-		span {
-			display: none;
-		}
-	}
-	a[href*="youtube"] {
-		&:before {
-			content: "\f167";
+	a {
+		i.fa-youtube {
 			color: #e52d27;
-	   	}
-		&:after {
-			content: 'YouTube';
 		}
-	}
-	a[href*="twitter"] {
-		&:before {
-			content: "\f099";
+		i.fa-twitter {
 			color: #55acee;
-	   	}
-		&:after {
-			content: 'Twitter';
 		}
-	}
-	a[href*="reddit"] {
-		&:before {
-			content: "\f281";
+		i.fa-reddit {
 			color:  #ff4500;
-	   	}
-		&:after {
-			content: 'Reddit';
 		}
-	}
-	a[href*="discord"] {
-		&:before {
-			content: "\f392";
+		i.fa-discord {
 			color: #7289da;
 	   	}
-		&:after {
-			content: 'Discord';
-		}
 	}
 }

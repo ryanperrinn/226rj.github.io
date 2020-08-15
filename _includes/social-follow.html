@@ -1,0 +1,21 @@
+<section class="follow">
+    <h2 id="follow">Follow</h2>
+    <ul>
+        {% for link in site.social.links %}
+            {% for social in site.data.socials %}
+                {% capture title %}{{ social.title | downcase }}{% endcapture %}
+                {% capture href %}{{ link | downcase }}{% endcapture %}
+                {% if href contains title %}
+        <li>
+            <a title="{{ social.title }}" href="{{ link }}" target="_blank">
+                <i class="{{ social.icon }} fa-fw" aria-hidden="true"></i>
+                <span>{{ social.title }}</span>
+            </a>
+        </li>
+                  {% break %}
+                {% endif %}
+            {% endfor %}
+
+        {% endfor %}
+    </ul>
+</section>

@@ -8,13 +8,6 @@
 				<li><a title="sitemap.xml" href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a></li>
 			</ul>
 		</section>
-		<section class="follow">
-			<h2 id="follow">Follow</h2>
-			<ul>
-				{% for link in site.social.links %}
-				<li><a title="{{ link }}" href="{{ link }}" target="_blank"><span>{{ link }}</span></a></li>
-				{% endfor %}
-			</ul>
-		</section>
+		{% include social-follow.html %}
 	</div>
 </footer>
