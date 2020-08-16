@@ -1,4 +1,4 @@
-# Site config
+# Site info
 name: RJ226
 tagline: Helping YOU build better in Minecraft
 description: RJ226 helps you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others.
@@ -6,7 +6,7 @@ author: RJ226
 logo: /ms-icon-310x310.png
 lang: en_GB
 
-# Social profiles
+# Social SEO profiles, following and sharing
 social:
   name: RJ226
   links:
@@ -14,14 +14,18 @@ social:
     - https://twitter.com/226Rj
     - https://www.reddit.com/r/RJ226/
     - https://discord.gg/cBUVsja
+  share-links:
+    twitter: true
+    facebook: true
+    pinterest: true
+    reddit: true
+    email: true
 
-# Select which social network share links to show in posts
-share-links-active:
-  twitter: true
-  facebook: true
-  pinterest: true
-  reddit: true
-  email: true
+# Web analytics
+analytics:
+  gtag: "UA-174966777-1"  # Fill in your Google Analytics gtag.js ID to track your website using gtag
+  #google_analytics: ""   # Fill in your Google Analytics ID to track your website using GA
+  #gtm: ""                # Google Tag Manager ID
 
 # Outputting
 baseurl: ""
