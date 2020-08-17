@@ -13,4 +13,4 @@ playlist:
       id: yj-GrrvVoBw
       title: Cool building ideas 2
 ---
-<p>Stuff about cool building ideas playlist.</p>
+<p>This series is filled up with videos of nice little things to build in your minecraft world or in your house.</p>

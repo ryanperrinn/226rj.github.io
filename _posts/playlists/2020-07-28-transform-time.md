@@ -1,6 +1,6 @@
 ---
 title: Transform Time
-tags: Caves End-Island Ice
+tags: Caves End-Island Ice House Transformation
 image: /assets/images/playlists/transform-time/transform-time-logo.jpg
 
 playlist:
@@ -19,4 +19,4 @@ playlist:
       id: OJq48iXiYFI
       title: "Transform Time 4: Ice"
 ---
-<p>Stuff about the transform time playlist.</p>
+<p>This is the series where I find a area of land in Minecraft Bedrock Edition and transform it into a house. All of the videos are in different worlds.</p>
