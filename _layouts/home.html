@@ -14,14 +14,7 @@ layout: default
   <div class="col-12 col-md-4">
     <div class="card p-0 border-0">
       <a href="{{ item.url | prepend: site.baseurl }}" alt="{{ item.title }}">
-        <img src="{{ item.image | prepend: site.baseurl }}" class="img-fluid" 
-            alt="{{ item.title }}"
-            srcset="{{ item.image | prepend: site.baseurl | replace: ".jpg", "-200w.jpg 200w" }},
-            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-400w.jpg 400w" }},
-            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-600w.jpg 600w" }},
-            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-800w.jpg 800w" }},
-            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-1280w.jpg 1280w" }},"
-            sizes="100vw" />
+        <img src="{{ item.image | prepend: site.baseurl | replace: ".jpg", "-400w.jpg" }}" class="img-fluid" alt="{{ item.title }}" />
       </a>
       <div class="content m-0 p-5">
         <h2 class="content-title mb-5">
