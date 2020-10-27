@@ -1,7 +1,18 @@
-<header class="header">
-	<div class="container">
-		{% if page.layout == 'home' %}<h1 class="logo">{% else %}<span class="logo">{% endif %}
-			<a title="{{ site.name }}" href="{{ site.baseurl | append: "/" }}">{{ site.name }} - {{ site.tagline }}</a>
-		{% if page.layout == 'home' %}</h1>{% else %}</span>{% endif %}
-	</div>
-</header>
+<!-- Navbar start -->
+<nav class="navbar">
+  <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
+  <!-- Navbar brand -->
+  <a href="{{ site.url }}" class="navbar-brand">
+    <img src="{{ "/assets/images/rj226-logo-36x36.png" | prepend: site.baseurl }}" alt="RJ226 logo" class="rounded-circle" loading="lazy">
+    {{ site.title }}
+  </a>
+  <!-- Navbar text -->
+  <span class="navbar-text hidden-xs-and-down">{{ site.tagline }}</span>
+  <div class="navbar-content ml-auto">
+    <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="far fa-moon" aria-hidden="true"></i>
+      <span class="sr-only">Toggle dark mode</span>
+    </button>
+  </div>
+</nav>
+<!-- Navbar end -->

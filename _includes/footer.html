@@ -1,13 +1,48 @@
-<footer class="footer">
-	<div class="container">
-		<section class="contact">
-			<h2 id="contact">Quick Links</h2>
-			<ul>
-				<li><a title="{{ site.name }}" href="{{ site.baseurl | append: "/" }}">Home</a></li>
-				<li><a title="About" href="{{ "/#about" | prepend: site.baseurl }}">About</a></li>
-				<li><a title="sitemap.xml" href="{{ "/sitemap.xml" | prepend: site.baseurl }}">Sitemap</a></li>
-			</ul>
-		</section>
-		{% include social-follow.html %}
-	</div>
-</footer>
+<!-- Custom footer start -->
+<div class="custom-footer">
+  <div class="container-fluid">
+    <div class="row row-eq-spacing">
+        <div class="col-12 col-md-6">
+          <div class="content">
+            <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">About</h4>
+            <p>My name is RJ226 and I am a Minecraft youtuber. I love to build in Minecraft. I would say I’m good, but certainly not the best. But don’t let that stop you from sticking around and watching a few of my videos!</p>
+            <p>I am going to try my best at helping you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6">
+            <div class="content">
+              <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">Quick links</h4>
+              <div>
+                <a href="{{ site.url }}" title="{{ site.title }}" class="custom-footer-link">
+                  <i class="fas fa-home fa-fw mr-1" aria-hidden="true"></i> <span>Home</span>
+                </a>
+              </div>
+              <div>
+                <a href="{{ "/downloads.html" | prepend: site.baseurl }}" title="Downloads" class="custom-footer-link">
+                  <i class="fas fa-file-download fa-fw mr-1" aria-hidden="true"></i> <span>Downloads</span>
+                </a>
+              </div>
+              <div>
+                <a href="{{ "/sitemap.xml" | prepend: site.baseurl }}" title="Sitemap" class="custom-footer-link">
+                  <i class="fas fa-sitemap fa-fw mr-1" aria-hidden="true"></i> <span>Sitemap</span>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6">
+          <div class="content">
+            <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">Follow</h4>
+            {% include social-follow.html %}
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="content">
+            <div class="text-muted font-size-8">
+              &copy; Copyright 2020 {{ site.title }}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Custom footer end -->

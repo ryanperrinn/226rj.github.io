@@ -1,67 +1,90 @@
 ---
 layout: default
-common-ext-js:
-  - href: "https://unpkg.com/scrollreveal@3.3.6/dist/scrollreveal.min.js"
-  - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-common-js:
-  - "assets/scripts/vendor/sticky-kit.min.js"
-  - "/assets/scripts/playlist.min.js"
 ---
-<section class="playlist">
-	<div class="container">
-		<article>
-			<span class="h2">Playlist Title</span>
-			<h1>
-				<a href="https://www.youtube.com/playlist?list={{ page.playlist.id }}" target="_blank" title="{{ page.title }}" rel="nofollow">{{ page.title }}</a>
-			</h1>
-			<span class="h2"><i class="fas fa-file-alt fa-fw fa-pull-left"></i>Description</span>
-			{{ page.content }}
+<!-- Title row -->
+<div class="row row-eq-spacing mb-0 d-flex">
+  <div class="col-6 my-0">
+    <h1 class="font-weight-lighter text-uppercase font-size-14 px-5 mt-0 mb-1"><i class="fas fa-photo-video fa-fw text-muted mr-5"></i>{{ page.title }}</h1>
+  </div>
+  <div class="col-6 my-0">
+    <ul class="float-right">
+      {% include social-share.html %}
+    </ul>
+  </div>
+</div>
+<!-- Image row -->
+<div class="row row-eq-spacing mt-0 mb-0 mx-5">
+  <div class="col" style="background-color: #FEF501;">
+    <img class="d-block mx-auto" src="{{ page.image | prepend: site.baseurl | replace: ".jpg", "-200w.jpg" }}" alt="{{ page.title }}">
+  </div>
+</div>
 
-			<div class="playlist-meta">
-				<span class="h2"><i class="fas fa-video fa-fw fa-pull-left"></i>Videos</span>
-				<ul>
-					{% for video in page.playlist.videos %}
-					<li>
-						<a title="{{ video.title }}" href="https://youtube.com/watch?v={{ video.id }}" target="_blank" rel="nofollow">{{ video.title }}</a>
-					</li>
-					{% endfor %}
-				</ul>
-				<span class="h2"><i class="fab fa-youtube-square fa-fw fa-pull-left"></i>Channel</span>
-				<p><a title="{{ page.playlist.channel }}" href="{{ site.data.channels[page.playlist.channel].url }}" target="_blank" rel="nofollow">{{ page.playlist.channel }}</a></p>
-				<span class="h2"><i class="fas fa-calendar-alt fa-fw fa-pull-left"></i>Year</span>
-				<p>{{ page.date | date: "%Y" }}</p>
-				<span class="h2"><i class="fas fa-tags fa-fw fa-pull-left"></i>Tags</span>
-				{% for tag in page.tags %}
-				<span class="tag tag-pill tag-dark"><i class="fas fa-tag fa-fw"></i>{{ tag }}</span>
-				{% endfor %}
-				{% include social-share.html %}
-			</div>
-		</article>
-		<aside>
-			<ul>
-				{% for video in page.playlist.videos %}
-				<li>
-					{% include youtube-video.html id=video.id %}
-				</li>
-				{% endfor %}
-			</ul>
-		</aside>
-	</div>
-</section>
-<section class="playlist-navigation">
-	<div class="container">
-		{% if page.previous and page.previous.categories contains "playlists" %}
-		<a title="Previous {{ page.previous.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
-			<span class="h2">Previous</span>
-			<h2>{{ page.previous.title }}</h2>
-		</a>
-		{% endif %}
-		{% if page.next and page.next.categories contains "playlists" %}
-		<a title="Next {{ page.next.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
-			<span class="h2">Next</span>
-			<h2>{{ page.next.title }}</h2>
-		</a>
-		{% endif %}
-	</div>
-</section>
+<div class="content mt-0">
+  {{ page.content }}
+</div>
+
+<!-- Cards row -->
+<div class="row row-eq-spacing mt-0">
+{% for video in page.playlist.videos %}
+  {% assign mod2 = forloop.index | modulo:2 %}
+  {% assign mod3 = forloop.index | modulo:3 %}
+  {% assign spacerClass = "d-md-none" %}
+  {% if mod3 == 0 %}
+    {% assign spacerClass = "d-md-none" %}
+  {% endif %}
+  {% if mod2 == 0 %}
+    {% assign spacerClass = "d-lg-none" %}
+  {% endif %}
+
+  {% case mod3 %}
+    {% when 0 %}{% assign col-mt = "mt-md-100" %}
+    {% when 2 %}{% assign col-mt = "mt-md-50" %}
+    {% else %}{% assign col-mt = "" %}
+  {% endcase %}
+
+  <div class="col-12 col-md-6 col-lg-4 {{ col-mt }} ">
+    <div class="card p-0 border-0">
+<!--
+      <a href="{{ video.url | prepend: site.baseurl }}" alt="{{ item.title }}">
+        <img src="https://i.ytimg.com/vi/{{ video.id }}/default.jpg" class="img-fluid" 
+            alt="{{ video.title }}" data-id="{{ video.id }}"
+            srcset="https://i.ytimg.com/vi/{{ video.id }}/mqdefault.jpg 320w,
+              https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg 480w,
+              https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg 1280w
+              "
+              loading="lazy" />
+      </a>
+-->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ video.id }}?odestbranding=1&showinfo=0&rel=0&color=white" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="content m-0 p-5">
+        <h2 class="card-title">
+          <a href="{{ video.url | prepend: site.baseurl }}" alt="{{ video.title }}" class="text-uppercase text-white-dm text-smoothing-antialiased">{{ video.title }}</a>
+        </h2>
+        {%- if video.description -%}<p class="card-text text-muted">{{ video.description }}</p>{%- endif -%}
+      </div>
+    </div>
+  </div>
+  <div class="v-spacer {{ spacerClass }}"></div>
+{% endfor %}
+</div>
+<!-- End cards row -->
+
+<!-- Pagination row -->
+<div class="row row-eq-spacing d-flex">
+  <div class="col-6">
+    {% if page.previous and page.previous.categories contains "playlists" %}
+    <a title="Previous playlist - {{ page.previous.title }}" href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
+      &laquo; {{ page.previous.title }}
+    </a>
+    {% endif %}
+  </div>
+  <div class="col-6 text-right">
+    {% if page.next and page.next.categories contains "playlists" %}
+    <a title="Next playlist - {{ page.next.title }}" href="{{ page.next.url | prepend: site.baseurl }}" class="next">
+      {{ page.next.title }} &raquo;
+    </a>
+    {% endif %}
+  </div>
+</div>

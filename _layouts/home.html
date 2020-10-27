@@ -1,38 +1,49 @@
 ---
 layout: default
-common-ext-js:
-  - href: "https://unpkg.com/scrollreveal@3.3.6/dist/scrollreveal.min.js"
-common-js:
-  - "/assets/scripts/home.min.js"
 ---
-<section class="intro">
-    <div class="container">
-        <h2 id="about"><i class="fas fa-user fa-fw fa-pull-left"></i>About me</h2>
-        {{ content }}
+
+<!-- Title row -->
+<div class="row row-eq-spacing mb-0">
+  <div class="col my-0">
+    <h1 class="font-weight-lighter text-uppercase font-size-14 px-5 mt-0 mb-1"><i class="fas fa-photo-video fa-fw text-muted mr-5"></i>Playlists</h1>
+  </div>
+</div>
+<!-- Cards row -->
+<div class="row row-eq-spacing mt-0">
+{% for item in site.categories.playlists reversed %}
+  <div class="col-12 col-md-4">
+    <div class="card p-0 border-0">
+      <a href="{{ item.url | prepend: site.baseurl }}" alt="{{ item.title }}">
+        <img src="{{ item.image | prepend: site.baseurl }}" class="img-fluid" 
+            alt="{{ item.title }}"
+            srcset="{{ item.image | prepend: site.baseurl | replace: ".jpg", "-200w.jpg 200w" }},
+            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-400w.jpg 400w" }},
+            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-600w.jpg 600w" }},
+            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-800w.jpg 800w" }},
+            {{ item.image | prepend: site.baseurl | replace: ".jpg", "-1280w.jpg 1280w" }},"
+            sizes="100vw" />
+      </a>
+      <div class="content m-0 p-5">
+        <h2 class="content-title mb-5">
+          <a href="{{ item.url | prepend: site.baseurl }}" alt="{{ item.title }}" class="text-uppercase text-white-dm text-smoothing-antialiased">{{ item.title }}</a>
+        </h2>
+        <p class="mt-0">
+          <a href="{{ item.url | prepend: site.baseurl }}" class="badge-group" role="group" aria-label="{{ item.title }}">
+            <span class="badge">Videos</span>
+            <span class="badge badge-primary">{{ item.playlist.videos | size }}</span>
+          </a>
+        </p>
+      </div>
     </div>
-</section>
-<section class="playlists">
-    <div class="container">
-        <h2 id="playlists"><i class="fas fa-photo-video fa-fw fa-pull-left"></i>Playlists</h2>
-        <ul class="playlists-list">
-            {% for item in site.categories.playlists reversed %}
-                <li>
-                    <a href="{{ item.url | prepend: site.baseurl }}" title="{{ item.title }}">
-                        <div class="img-wrapper">
-                            <img src="{{ item.image | prepend: site.baseurl }}" alt="{{ item.title }}"  title="{{ item.title }}" 
-                                srcset="{{ item.image | prepend: site.baseurl | replace: ".jpg", "-200w.jpg 200w" }},
-                                        {{ item.image | prepend: site.baseurl | replace: ".jpg", "-400w.jpg 400w" }},
-                                        {{ item.image | prepend: site.baseurl | replace: ".jpg", "-600w.jpg 600w" }},
-                                        {{ item.image | prepend: site.baseurl | replace: ".jpg", "-800w.jpg 800w" }},
-                                        {{ item.image | prepend: site.baseurl | replace: ".jpg", "-1280w.jpg 1280w" }},"
-                                sizes="50vw" 
-                            />
-                        </div>
-                        <span class="h2">{{ item.playlist.type }} &#8226; {{ item.playlist.videos | size }} videos</span>
-                        <h3>{{ item.title }}</h3>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</section>
+  </div>
+{% endfor %}
+</div>
+<!-- End cards row -->
+
+<!-- Buttons row -->
+<div class="row row-eq-spacing">
+  <!-- First column -->
+  <div class="col-12">
+    <a class="btn btn-block btn-primary btn-lg rounded-0" href="downloads"><i class="fas fa-file-download fa-fw"></i>Downloads</a>
+  </div>
+</div>

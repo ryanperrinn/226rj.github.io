@@ -1,9 +1,9 @@
 # Site info
-name: RJ226
+title: RJ226
 tagline: Helping YOU build better in Minecraft
 description: RJ226 helps you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others.
 author: RJ226
-logo: /ms-icon-310x310.png
+logo: /assets/images/favicons/ms-icon-310x310.png
 lang: en_GB
 
 # Social SEO profiles, following and sharing
@@ -42,6 +42,7 @@ sass:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-github-metadata
 
 # Front Matter defaults
 defaults:
@@ -62,3 +63,9 @@ defaults:
       playlist:
         type: Playlist
         channel: RJ226
+
+
+collections:
+  downloads:
+    output: true
+    permalink: /downloads/:path/

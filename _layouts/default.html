@@ -1,16 +1,40 @@
+---
+common-ext-js:
+  - "https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"
+---
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }} | {{ site.tagline }}{% endif %}</title>
-	{% include head.html %}
-</head>
-<body>
+<html lang="en-GB">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
     {% include analytics-gtm-body.html %}
-	{% include header.html %}
-	<main class="content">
-		{{ content }}
-	</main>
-	{% include footer.html %}
-	{% include footer-scripts.html %}
-</body>
+
+    <!-- Page wrapper start -->
+    <div class="page-wrapper with-navbar">
+
+      {% include header.html %}
+
+      <!-- Content wrapper start -->
+      <div class="content-wrapper">
+
+        <!-- Content -->
+        <div class="container container-xl">
+        
+          {{ content }}
+
+        </div>
+        <!-- End content -->
+        
+        {% include footer.html %}
+
+      </div>
+      <!-- Content wrapper end -->
+
+    </div>
+    <!-- Page wrapper end -->
+
+    {% include footer-scripts.html %}
+
+  </body>
 </html>
