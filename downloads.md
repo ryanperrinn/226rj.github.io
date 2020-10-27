@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Downloads
+description: Download behaviour packs, resource packs and worlds to enhance your minecraft experience
 ---
 <!-- Title row -->
 <div class="row row-eq-spacing mb-0">
