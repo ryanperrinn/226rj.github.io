@@ -17,11 +17,11 @@ layout: default
 {%- for repository in repositories -%}
 <div class="row row-eq-spacing mt-5">
   <div class="col-12 col-md-auto text-center text-md-left"><img src="https://raw.githubusercontent.com/{{ repository.owner.login | url_encode }}/{{ repository.name | url_encode }}/{{ repository.default_branch | url_encode }}/pack_icon.png" class="img-fluid" alt="{{ repository.name }}" /></div>
-  <div class="col">
+  <div class="col download">
     <div class="content text-center text-md-left">
-      <h2 class="card-title font-weight-lighter text-uppercase mb-0">{{ repository.name | replace: "MCPack", "" }}</h2>
+      <h2 class="content-title font-weight-lighter text-uppercase mb-0">{{ repository.name | replace: "MCPack", "" }}</h2>
       <p class="text-muted mt-0">{{ repository.description }}</p>
-      <p><a href="https://github.com/{{ repository.owner.login | url_encode }}/{{ repository.name | url_encode }}/releases/latest/download/{{ repository.name | replace: 'MCPack', '' | url_encode }}.mcpack" class="btn btn-primary rounded-0">Download</a></p>
+      <p><a href="https://github.com/{{ repository.owner.login | url_encode }}/{{ repository.name | url_encode }}/releases/latest/download/{{ repository.name | replace: 'MCPack', '' | url_encode }}.mcpack" class="btn btn-primary rounded-0 text-dark">Download</a></p>
     </div>
   </div>
 </div>

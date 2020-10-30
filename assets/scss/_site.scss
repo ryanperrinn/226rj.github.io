@@ -1,32 +1,53 @@
+/* 
+Global scope 
+*/
+:root {
+  /* Red */
+  --red-color: #f00000;
+  --red-color-light: #ff3535;
+  --red-color-very-light: #ff5656;
+  --red-color-dark: #8a0808;
+  --red-color-very-dark: #570404;
+  --red-box-shadow-color: rgba(173, 19, 27, 0.637);
+  --red-box-shadow-color-darker: rgba(167, 22, 29, 0.61);
+
+  /* Yellow */
+  --yellow-color: #FEF501;
+  
+  /* Primary color */
+  --primary-color: var(--red-color); 
+  --primary-color-light: var(--red-color-light); 
+  --primary-color-dark: var(--red-color-dark); 
+}
+
+.download {
+  --lm-button-primary-bg-color: var(--yellow-color); 
+  --lm-button-primary-border-color: var(--yellow-color);
+  --lm-button-primary-bg-color-hover: var(--yellow-color-light);
+  --lm-button-primary-border-color-hover: var(--yellow-color-light);
+  --dm-button-primary-bg-color: var(--yellow-color); 
+  --dm-button-primary-border-color: var(--yellow-color);
+  --dm-button-primary-bg-color-hover: var(--yellow-color-light);
+  --dm-button-primary-border-color-hover: var(--yellow-color-light);
+}
+
+#playlist-header {
+  background-color: var(--yellow-color);
+}
 
 /* Custom footer */
 .custom-footer {
-    background-color: rgba(0, 0, 0, 0.025);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
+  background-color: var(--gray-color-very-light);
+  border-top: var(--navbar-border-width) solid var(--lm-navbar-border-color);
 
   a.custom-footer-link {
-      color: rgba(0, 0, 0, 0.65);
+    color: var(--lm-base-text-color);
   }
   a.custom-footer-link:hover {
-      color: #1890ff;
-      text-decoration: none;
+    color: var(--lm-link-text-color-hover);
+    text-decoration: none;
   }
 }
-
-.playlist-header {
-  .row,
-  .d-flex {
-    background-color: #FEF501;
-  }
-  .prev i,
-  .next i {
-    filter: invert(0);
-  }
-}
-
 
 /* Dark mode */
 .dark-mode {
@@ -38,19 +59,15 @@
 
   /* Custom footer */
   .custom-footer {
-    
-    background-color: #111417;
-
+    background-color: var(--dm-navbar-bg-color);
     a.custom-footer-link {
-      color: rgba(255, 255, 255, 0.65);
+      color: var(--dm-base-text-color);
     }
     a.custom-footer-link:hover {
-      color: #1890ff;
+      color: var(--dm-link-text-color-hover);
       text-decoration: none;
     }
-
   }
-
 }
 
 /* Responsive embeds */

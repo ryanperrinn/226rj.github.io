@@ -13,8 +13,8 @@ layout: default
   </div>
 </div>
 <!-- Image row -->
-<div class="row row-eq-spacing mt-0 mb-0 mx-5">
-  <div class="col" style="background-color: #FEF501;">
+<div id="playlist-header" class="row row-eq-spacing mt-0 mb-0 mx-5">
+  <div class="col">
     <img class="d-block mx-auto" src="{{ page.image | prepend: site.baseurl | replace: ".jpg", "-200w.jpg" }}" alt="{{ page.title }}">
   </div>
 </div>
@@ -60,7 +60,7 @@ layout: default
       </div>
       <div class="content m-0 p-5">
         <h2 class="card-title">
-          <a href="{{ video.url | prepend: site.baseurl }}" alt="{{ video.title }}" class="text-uppercase text-white-dm text-smoothing-antialiased">{{ video.title }}</a>
+          <a href="{{ video.url | prepend: site.baseurl }}" alt="{{ video.title }}" class="text-uppercase text-smoothing-antialiased">{{ video.title }}</a>
         </h2>
         {%- if video.description -%}<p class="card-text text-muted">{{ video.description }}</p>{%- endif -%}
       </div>
