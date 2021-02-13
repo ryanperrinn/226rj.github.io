@@ -1,9 +1,8 @@
 ### Jekyll ###
 _site
 .sass-cache
-.jekyll-metadata
 .jekyll-cache
-Gemfile.lock
+.jekyll-metadata
 vendor
 
 ### Gulp ###
