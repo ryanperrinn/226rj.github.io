@@ -1,12 +1,20 @@
 -
+  title: Discord
+  icon: fab fa-discord
+-
   title: YouTube
   icon: fab fa-youtube
 -
+  title: Twitch
+  icon: fab fa-twitch
+-
+  title: Tiktok
+  icon: fab fa-tiktok
+-
   title: Twitter
   icon: fab fa-twitter
+  description: blah be blah
 -
   title: Reddit
   icon: fab fa-reddit
--
-  title: Discord
-  icon: fab fa-discord
+  description: blah blah
