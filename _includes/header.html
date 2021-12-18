@@ -8,6 +8,16 @@
   </a>
   <!-- Navbar text -->
   <span class="navbar-text hidden-xs-and-down">{{ site.tagline }}</span>
+  <!-- Navbar nav -->
+  <ul class="navbar-nav d-none d-md-flex"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+    {%- for nav in site.data.navigation -%}
+    {%- if nav.hideFromHeader == nil -%}
+    <li class="nav-item{% if nav.url == page.url %} active{% endif %}">
+      <a href="{{ nav.url | prepend: site.baseurl }}" title="{{ nav.title }}" class="nav-link">{{ nav.title }}</a>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
   <div class="navbar-content ml-auto">
     <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
       <i class="far fa-moon" aria-hidden="true"></i>
