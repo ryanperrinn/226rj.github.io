@@ -65,6 +65,12 @@ defaults:
       playlist:
         type: Playlist
         channel: RJ226
+  -
+    scope:
+      path: _posts/builds
+      type: posts
+    values:
+      category: builds
 
 # Collections
 collections:
