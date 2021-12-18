@@ -12,7 +12,14 @@
         <div class="col-6 col-md-3 col-sm-6">
             <div class="content">
               <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">Quick links</h4>
+              {% for nav in site.data.navigation %}
               <div>
+                <a href="{{ nav.url | prepend: site.baseurl }}" title="{{ nav.title }}" class="custom-footer-link">
+                  <i class="{{ nav.icon }} fa-fw mr-1" aria-hidden="true"></i> <span>{{ nav.title }}</span>
+                </a>
+              </div>
+              {% endfor %}
+              <!-- <div>
                 <a href="{{ site.url }}" title="{{ site.title }}" class="custom-footer-link">
                   <i class="fas fa-home fa-fw mr-1" aria-hidden="true"></i> <span>Home</span>
                 </a>
@@ -36,7 +43,7 @@
                 <a href="{{ "/sitemap.xml" | prepend: site.baseurl }}" title="Sitemap" class="custom-footer-link">
                   <i class="fas fa-sitemap fa-fw mr-1" aria-hidden="true"></i> <span>Sitemap</span>
                 </a>
-              </div>
+              </div> -->
             </div>
         </div>
         <div class="col-6 col-md-3 col-sm-6">
