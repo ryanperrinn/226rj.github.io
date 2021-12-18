@@ -1,0 +1,21 @@
+-
+  title: Home
+  icon: fas fa-home
+  url: /
+-
+  title: Downloads
+  icon: fas fa-file-download
+  url: /downloads
+-
+  title: Links
+  icon: fas fa-link
+  url: /links
+-
+  title: Setup
+  icon: fas fa-desktop
+  url: /setup
+-
+  title: Sitemap
+  icon: fas fa-sitemap
+  url: /sitemap.xml
+  hideFromHeader: true
