@@ -10,12 +10,10 @@ lang: en_GB
 social:
   name: RJ226
   links:
-    - https://discord.gg/QnuHuK6AWh
     - https://www.youtube.com/channel/UC3J585n81BMItgouCZOZi_w
-    - https://www.twitch.tv/rj226
-    - https://www.tiktok.com/@RJ226_
-    - https://twitter.com/RJ226_
+    - https://twitter.com/226Rj
     - https://www.reddit.com/r/RJ226/
+    - https://discord.gg/cBUVsja
   share-links:
     twitter: true
     facebook: true
@@ -59,30 +57,15 @@ defaults:
       path: _posts/playlists
       type: posts
     values:
-      layout: post-playlist
+      layout: playlist
       category: playlists
       social-share: true
       playlist:
         type: Playlist
         channel: RJ226
-  -
-    scope:
-      path: _posts/builds
-      type: posts
-    values:
-      category: builds
-  -
-    scope:
-      path: _posts/downloads
-      type: posts
-    values:
-      layout: post-download
-      category: downloads
-# Collections
+
+
 collections:
   downloads:
     output: true
     permalink: /downloads/:path/
-
-
-include: ['_categories']

@@ -1,14 +1,14 @@
-{%- for link in site.social.links -%}
-  {%- for social in site.data.socials -%}
-    {%- capture title -%}{{ social.title | downcase }}{%- endcapture -%}
-    {%- capture href -%}{{ link | downcase }}{%- endcapture -%}
-    {%- if href contains title -%}
+{% for link in site.social.links %}
+  {% for social in site.data.socials %}
+    {% capture title %}{{ social.title | downcase }}{% endcapture %}
+    {% capture href %}{{ link | downcase }}{% endcapture %}
+    {% if href contains title %}
 <div>
   <a title="{{ social.title }}" href="{{ link }}" target="_blank" rel="noopener" class="custom-footer-link link-{{ social.title | slugify }} ">
     <i class="{{ social.icon }} fa-fw" aria-hidden="true"></i> <span>{{ social.title }}<span>
   </a>
 </div>
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endfor -%}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

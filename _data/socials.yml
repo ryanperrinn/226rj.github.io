@@ -1,24 +1,12 @@
 -
-  title: Discord
-  icon: fab fa-discord
-  description: Join my Discord
--
   title: YouTube
   icon: fab fa-youtube
-  description: Subscribe to my YouTube
--
-  title: Twitch
-  icon: fab fa-twitch
-  description: Follow my Twitch
--
-  title: Tiktok
-  icon: fab fa-tiktok
-  description: Follow my TikTok
 -
   title: Twitter
   icon: fab fa-twitter
-  description: Follow my Twitter
 -
   title: Reddit
   icon: fab fa-reddit
-  description: Join my subreddit
+-
+  title: Discord
+  icon: fab fa-discord

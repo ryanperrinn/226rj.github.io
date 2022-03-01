@@ -1,10 +1,10 @@
 <!-- Custom footer start -->
 <div class="custom-footer">
   <div class="container-fluid">
-    <div class="row row-eq-spacing mb-0">
+    <div class="row row-eq-spacing">
         <div class="col-12 col-md-6">
           <div class="content">
-            <h3 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">About</h3>
+            <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">About</h4>
             <p>My name is RJ226 and I am a Minecraft youtuber. I love to build in Minecraft. I would say I’m good, but certainly not the best. But don’t let that stop you from sticking around and watching a few of my videos!</p>
             <p>I am going to try my best at helping you become a great builder in Minecraft using some of things that I have learnt from my time playing Minecraft and from watching others.</p>
           </div>
@@ -12,38 +12,21 @@
         <div class="col-6 col-md-3 col-sm-6">
             <div class="content">
               <h4 class="content-title font-weight-lighter text-uppercase font-size-16 mb-10">Quick links</h4>
-              {% for nav in site.data.navigation %}
               <div>
-                <a href="{{ nav.url | prepend: site.baseurl }}" title="{{ nav.title }}" class="custom-footer-link">
-                  <i class="{{ nav.icon }} fa-fw mr-1" aria-hidden="true"></i> <span>{{ nav.title }}</span>
-                </a>
-              </div>
-              {% endfor %}
-              <!-- <div>
                 <a href="{{ site.url }}" title="{{ site.title }}" class="custom-footer-link">
                   <i class="fas fa-home fa-fw mr-1" aria-hidden="true"></i> <span>Home</span>
                 </a>
               </div>
               <div>
-                <a href="{{ "/downloads" | prepend: site.baseurl }}" title="Downloads" class="custom-footer-link">
+                <a href="{{ "/downloads.html" | prepend: site.baseurl }}" title="Downloads" class="custom-footer-link">
                   <i class="fas fa-file-download fa-fw mr-1" aria-hidden="true"></i> <span>Downloads</span>
-                </a>
-              </div>
-              <div>
-                <a href="{{ "/links" | prepend: site.baseurl }}" title="Links" class="custom-footer-link">
-                  <i class="fas fa-link fa-fw mr-1" aria-hidden="true"></i> <span>Links</span>
-                </a>
-              </div>
-              <div>
-                <a href="{{ "/setup" | prepend: site.baseurl }}" title="Links" class="custom-footer-link">
-                  <i class="fas fa-desktop fa-fw mr-1" aria-hidden="true"></i> <span>Setup</span>
                 </a>
               </div>
               <div>
                 <a href="{{ "/sitemap.xml" | prepend: site.baseurl }}" title="Sitemap" class="custom-footer-link">
                   <i class="fas fa-sitemap fa-fw mr-1" aria-hidden="true"></i> <span>Sitemap</span>
                 </a>
-              </div> -->
+              </div>
             </div>
         </div>
         <div class="col-6 col-md-3 col-sm-6">
@@ -54,8 +37,8 @@
         </div>
         <div class="col-12">
           <div class="content">
-            <div class="text-muted font-size-8 mb-10">
-              &copy; Copyright 2020-2022 {{ site.title }}
+            <div class="text-muted font-size-8">
+              &copy; Copyright 2020 {{ site.title }}
             </div>
           </div>
       </div>

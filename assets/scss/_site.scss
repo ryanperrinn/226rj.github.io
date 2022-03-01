@@ -1,139 +1,56 @@
-/* 
-Global scope 
-*/
-:root {
-  /* Red */
-  --red-color: #f00000;
-  --red-color-light: #ff3535;
-  --red-color-very-light: #ff5656;
-  --red-color-dark: #8a0808;
-  --red-color-very-dark: #570404;
-  --red-box-shadow-color: rgba(173, 19, 27, 0.637);
-  --red-box-shadow-color-darker: rgba(167, 22, 29, 0.61);
-
-  /* Yellow */
-  --yellow-color: #FEF501;
-  
-  /* Primary color */
-  --primary-color: var(--red-color); 
-  --primary-color-light: var(--red-color-light); 
-  --primary-color-dark: var(--red-color-dark); 
-}
-
-.download {
-  --lm-button-primary-bg-color: var(--yellow-color); 
-  --lm-button-primary-border-color: var(--yellow-color);
-  --lm-button-primary-bg-color-hover: var(--yellow-color-light);
-  --lm-button-primary-border-color-hover: var(--yellow-color-light);
-  --dm-button-primary-bg-color: var(--yellow-color); 
-  --dm-button-primary-border-color: var(--yellow-color);
-  --dm-button-primary-bg-color-hover: var(--yellow-color-light);
-  --dm-button-primary-border-color-hover: var(--yellow-color-light);
-}
-
-#playlist-header {
-  background-color: var(--yellow-color);
-}
 
 /* Custom footer */
 .custom-footer {
-  background-color: var(--gray-color-very-light);
-  border-top: var(--navbar-border-width) solid var(--lm-navbar-border-color);
+    background-color: rgba(0, 0, 0, 0.025);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
 
   a.custom-footer-link {
-    color: var(--lm-base-text-color);
+      color: rgba(0, 0, 0, 0.65);
   }
   a.custom-footer-link:hover {
-    color: var(--lm-link-text-color-hover);
-    text-decoration: none;
+      color: #1890ff;
+      text-decoration: none;
   }
 }
 
-/* Nav menu */
-// button.active[data-toggle="dropdown"] {
-//   .fa-bars:before {
-//     content: "\f068" !important;
-//   }
-// }
-.btn-menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-
-//  transition: all .5s ease-in-out;
-}
-.btn-burger {
-  width: 14px;
-  height: 2px;
-  background: var(--lm-button-text-color);
-  border-radius: 5px;
-//  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-}
-.btn-burger::before,
-.btn-burger::after {
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background: var(--lm-button-text-color);
-  border-radius: 5px;
-//  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-}
-.dark-mode .btn-burger,
-.dark-mode .btn-burger::before,
-.dark-mode .btn-burger::after {
-  background: var(--dm-button-text-color);
-}
-.btn-burger::before {
-  transform: translate(-7px, -5px);
-}
-.btn-burger::after {
-  transform: translate(-7px, 5px);
+.playlist-header {
+  .row,
+  .d-flex {
+    background-color: #FEF501;
+  }
+  .prev i,
+  .next i {
+    filter: invert(0);
+  }
 }
 
-/* ANIMATION */
-.btn-menu.active .btn-burger {
-  transform: translateX(15px);
-  background: transparent;
-  box-shadow: none;
-}
-.btn-menu.active .btn-burger::before {
-  transform: rotate(45deg) translate(-16px, 16px);
-}
-.btn-menu.active .btn-burger::after {
-  transform: rotate(-45deg) translate(-16px, -16px);
-}
-
-/* Breadcrumbs */
-.breadcrumb-item:last-child:after {
-  content: var(--breadcrumb-separator-content);
-  margin-left: var(--breadcrumb-separator-margin-left);
-}
 
 /* Dark mode */
 .dark-mode {
 
   /* Dark mode toggle */
-  .fa-moon:before {
-    //font-weight: 900;
-    content: "\f185";
+  .fa-moon {
+    font-weight: 900;
   }
 
   /* Custom footer */
   .custom-footer {
-    background-color: var(--dm-navbar-bg-color);
+    
+    background-color: #111417;
+
     a.custom-footer-link {
-      color: var(--dm-base-text-color);
+      color: rgba(255, 255, 255, 0.65);
     }
     a.custom-footer-link:hover {
-      color: var(--dm-link-text-color-hover);
+      color: #1890ff;
       text-decoration: none;
     }
+
   }
+
 }
 
 /* Responsive embeds */
@@ -144,8 +61,3 @@ Global scope
 .embed-responsive-16by9::before{padding-top:56.25%}
 .embed-responsive-4by3::before{padding-top:75%}
 .embed-responsive-1by1::before{padding-top:100%}
-
-
-.font-size-56 {
-  font-size: 5.6rem!important;
-}

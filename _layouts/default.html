@@ -20,24 +20,10 @@ common-ext-js:
 
         <!-- Content -->
         <div class="container container-xl">
-          <div class="content">
-            <nav aria-label="Breadcrumb navigation">
-              <ul class="breadcrumb mt-10">
-              {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-                <li class="breadcrumb-item"><a href="{{ site.url }}">Home</a></li>
-                {% for crumb in crumbs offset: 1 %}
-                  {% if forloop.last %}
-                  <li class="breadcrumb-item active" aria-current="page"><a href="#">{{ page.title }}</a></li>
-                  {% else %}
-                  <li class="breadcrumb-item"><a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a></li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </nav>
-          </div>
+        
           {{ content }}
 
-          </div>
+        </div>
         <!-- End content -->
         
         {% include footer.html %}
