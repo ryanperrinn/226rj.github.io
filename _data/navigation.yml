@@ -3,17 +3,25 @@
   icon: fas fa-home
   url: /
 -
+  title: Playlists
+  icon: fas fa-photo-video
+  url: /playlists/
+-
+  title: Builds
+  icon: fas fa-building
+  url: /builds/
+  -
+  title: Setup
+  icon: fas fa-desktop
+  url: /setup
+-
   title: Downloads
   icon: fas fa-file-download
-  url: /downloads
+  url: /downloads/
 -
   title: Links
   icon: fas fa-link
   url: /links
--
-  title: Setup
-  icon: fas fa-desktop
-  url: /setup
 -
   title: Sitemap
   icon: fas fa-sitemap

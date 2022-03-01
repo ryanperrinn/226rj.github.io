@@ -59,7 +59,7 @@ defaults:
       path: _posts/playlists
       type: posts
     values:
-      layout: playlist
+      layout: post-playlist
       category: playlists
       social-share: true
       playlist:
@@ -71,9 +71,18 @@ defaults:
       type: posts
     values:
       category: builds
-
+  -
+    scope:
+      path: _posts/downloads
+      type: posts
+    values:
+      layout: post-download
+      category: downloads
 # Collections
 collections:
   downloads:
     output: true
     permalink: /downloads/:path/
+
+
+include: ['_categories']

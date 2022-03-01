@@ -18,108 +18,20 @@ description: RJ226's Setup
                 class="fa-fw text-muted mr-5"></i>Peripherals</h2>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    Monitor
-                </h2>
-                <p class="text-muted">
-                    Dell 32" gaming monitor S3220DGF
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://www.amazon.co.uk/dp/B07XTVYDC3"
-                        target="_blank" class="btn">View</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    Mouse
-                </h2>
-                <p class="text-muted">
-                    Corsair Dark Core RGB PRO SE
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://www.amazon.co.uk/Corsair-Wireless-Programmable-Multi-Colour-Backlighting/dp/B083KZB7XW"
-                        target="_blank" class="btn">View</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    Keyboard
-                </h2>
-                <p class="text-muted">
-                    Corsair K70 RGB MK.2 Cherry MX RED 
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://www.amazon.co.uk/Corsair-Mechanical-Gaming-Keyboard-Switches/dp/B07DNSTH51/"
-                        target="_blank" class="btn">View</a>
-                </div>
+<!-- Setup items row -->
+<div class="row">
+    {%- for item in site.data.setup -%}
+    <div class="col-4">
+        <div class="card">
+            <h2 class="card-title">{{ item.title }}</h2>
+            <p class="text-muted">
+                {{ item.description }}
+            </p>
+            <div class="text-right">
+                <!-- text-right = text-align: right -->
+                <a href="{{ item.url }}" target="_blank" class="btn">View</a>
             </div>
         </div>
     </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    Headphones
-                </h2>
-                <p class="text-muted">
-                    Corsair Void Elite Surround
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://www.amazon.co.uk/Corsair-Optimised-Omnidirection-Microphone-Compatibility/dp/B07Y2MK33P/"
-                        target="_blank" class="btn">View</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    Microphone
-                </h2>
-                <p class="text-muted">
-                    Tonor Q9 USB Mic
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://www.amazon.co.uk/gp/product/B07NMJ84FW/"
-                        target="_blank" class="btn">View</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card">
-                <h2 class="card-title">
-                    MacroPad
-                </h2>
-                <p class="text-muted">
-                    Pimoroni KeyBow2040
-                </p>
-                <div class="text-right">
-                    <!-- text-right = text-align: right -->
-                    <a href="https://shop.pimoroni.com/products/keybow-2040?variant=32399559589971"
-                        target="_blank" class="btn">View</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {%- endfor -%}
 </div>

@@ -16,30 +16,30 @@ description: Social linkls for RJ226
     </div>
 </div>
 
+<!-- Links -->
 <div class="content">
-<!-- Content -->
-<div class="my-20 social-links">
-    <a href="/setup" class="card w-full mw-full m-0 p-0 d-flex link-My Setup" target="_blank" rel="noopener">
-        <div class="w-100 h-100 align-self-center">
-            <div class="w-100 h-100 rounded d-flex align-items-center justify-content-center bg-light-lm bg-dark-light-dm text-dark-lm text-light-dm">
-                <i class="fas fa-desktop fa-fw font-size-56" aria-hidden="true"></i>
-                <span class="sr-only">My Setup</span>
+    <div class="my-20 social-links">
+        <a href="/setup" class="card w-full mw-full m-0 p-0 d-flex link-My Setup" rel="noopener">
+            <div class="w-100 h-100 align-self-center">
+                <div class="w-100 h-100 rounded d-flex align-items-center justify-content-center bg-light-lm bg-dark-light-dm text-dark-lm text-light-dm">
+                    <i class="fas fa-desktop fa-fw font-size-56" aria-hidden="true"></i>
+                    <span class="sr-only">My Setup</span>
+                </div>
             </div>
-        </div>
-        <div class="flex-grow-1 d-flex align-items-center">
-            <div class="p-10 w-full m-auto">
-                <p class="m-0 font-weight-medium text-dark-lm text-light-dm">
-                    My Setup <i class="fa fa-angle-right ml-5" aria-hidden="true"></i>
-                </p>
-                <p class="m-0 mt-5 text-muted font-size-12">
-                   Check out the part to my setup here
-                </p>
+            <div class="flex-grow-1 d-flex align-items-center">
+                <div class="p-10 w-full m-auto">
+                    <p class="m-0 font-weight-medium text-dark-lm text-light-dm">
+                        My Setup <i class="fa fa-angle-right ml-5" aria-hidden="true"></i>
+                    </p>
+                    <p class="m-0 mt-5 text-muted font-size-12">
+                    Check out the part to my setup here
+                    </p>
+                </div>
             </div>
-        </div>
-    </a>
-</div>
-{%- for link in site.social.links -%}
-  {%- for social in site.data.socials -%}
+        </a>
+    </div>
+    {%- for link in site.social.links -%}
+    {%- for social in site.data.socials -%}
     {%- capture title -%}{{ social.title | downcase }}{%- endcapture -%}
     {%- capture href -%}{{ link | downcase }}{%- endcapture -%}
     {%- if href contains title -%}
@@ -66,17 +66,6 @@ description: Social linkls for RJ226
             </div>
         </a>
     </div>
-
-    <!-- <div class="row row-eq-spacing mt-5">
-        <div class="col-1 text-center text-md-left"><i class="{{ social.icon }} fa-fw fa-5x" aria-hidden="true"></i></div>
-        <div class="col-11">
-            <div class="content text-center text-md-left">
-                <h2 class="content-title font-weight-lighter text-uppercase mb-0">{{ social.title }}</h2>
-                <p class="text-muted mt-0">{{ repository.description }}</p>
-                <p><a href={{ link }} class="btn btn-primary rounded-0 text-dark">Download</a></p>
-            </div>
-        </div>
-    </div> -->
     {%- break -%}
     {%- endif -%}
   {%- endfor -%}

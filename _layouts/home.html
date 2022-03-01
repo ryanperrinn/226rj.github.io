@@ -1,46 +1,43 @@
 ---
 layout: default
+common-ext-js:
+  - "https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"
+  - "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
+  - "assets/script/main.js"
 ---
 
-<!-- Title row -->
-<div class="row row-eq-spacing mb-0">
-  <div class="col my-0">
-    <h1 class="font-weight-lighter text-uppercase font-size-14 px-5 mt-0 mb-1"><i class="fas fa-photo-video fa-fw text-muted mr-5"></i>Playlists</h1>
-  </div>
-</div>
-<!-- Cards row -->
-<div class="row row-eq-spacing mt-0">
-{% for item in site.categories.playlists reversed %}
-  <div class="col-12 col-md-4">
-    <div class="card p-0 border-0">
-      <a href="{{ item.url | prepend: site.baseurl }}" alt="{{ item.title }}">
-        <img src="{{ item.image | prepend: site.baseurl | replace: ".jpg", "-400w.jpg" }}" class="img-fluid" alt="{{ item.title }}" />
+<!-- Featured Posts Carousel-->
+<div class="content bg-light bg-dark-dm">
+  <div class="carousel">
+  {%- for post in site.posts -%}
+  {%- if post.featured -%}
+    <!-- Card with no padding with a content container nested inside of it -->
+    <div class="carousel-cell">
+      <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+        <img src="{{ post.image | prepend: site.baseurl }}" class="img-fluid" alt="{{ post.title }}">
       </a>
-      <div class="content m-0 p-5">
-        <h2 class="content-title mb-5">
-          <a href="{{ item.url | prepend: site.baseurl }}" alt="{{ item.title }}" class="text-uppercase text-smoothing-antialiased">{{ item.title }}</a>
-        </h2>
-        <p class="mt-0">
-          <a href="{{ item.url | prepend: site.baseurl }}" class="badge-group" role="group" aria-label="{{ item.title }}">
-            <span class="badge">Videos</span>
-            <span class="badge badge-primary">{{ item.playlist.videos | size }}</span>
-          </a>
-        </p>
-      </div>
     </div>
+  {%- endif -%}
+  {%- endfor -%}
   </div>
-{% endfor %}
+  <div class="content pb-10">
+    <h2 class="content-title carousel-caption"></h2>
+  </div>
 </div>
-<!-- End cards row -->
 
 <!-- Buttons row -->
 <div class="row row-eq-spacing">
   <!-- First column -->
-  <div class="col-12">
-    <a class="btn btn-block btn-primary btn-lg rounded-0" href="downloads"><i class="fas fa-file-download fa-fw"></i>Downloads</a>
+  <div class="col-12 col-sm-6 col-md mt-10">
+    <a class="btn btn-block btn-primary btn-lg rounded-0" href="{{ "downloads" | prepend: site.baseurl }}"><i class="fas fa-file-download fa-fw mr-5"></i>Downloads</a>
   </div>
-  <!-- First column -->
-  <div class="col-12 mt-10">
-    <a class="btn btn-block btn-primary btn-lg rounded-0" href="links"><i class="fas fa-link fa-fw"></i>Links</a>
+  <div class="col-12 col-sm-6 col-md mt-10">
+    <a class="btn btn-block btn-primary btn-lg rounded-0" href="{{ "builds" | prepend: site.baseurl }}"><i class="fas fa-building fa-fw mr-5"></i>Builds</a>
   </div>
-</div>
+  <div class="col-12 col-sm-6 col-md mt-10">
+    <a class="btn btn-block btn-primary btn-lg rounded-0" href="{{ "playlists" | prepend: site.baseurl }}"><i class="fas fa-photo-video fa-fw mr-5"></i>Playlists</a>
+  </div>
+  <div class="col-12 col-sm-6 col-md mt-10">
+    <a class="btn btn-block btn-primary btn-lg rounded-0" href="{{ "links" | prepend: site.baseurl }}"><i class="fas fa-link fa-fw mr-5"></i>Links</a>
+  </div>
+</div>  
